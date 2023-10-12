@@ -260,6 +260,7 @@ input[type="checkbox"] {
 }
 
 .footer-links {
+  margin-top: 5px;
   display: flex;
   width: 45%;
   justify-content: space-evenly;
