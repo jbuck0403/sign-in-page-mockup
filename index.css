@@ -32,7 +32,7 @@ body {
 }
 
 .logo-container img {
-  height: 150px;
+  height: 100px;
   width: auto;
 }
 
@@ -95,6 +95,10 @@ form label {
   font-weight: 600;
 }
 
+.email-line {
+  margin-bottom: 4px;
+}
+
 .email {
   width: 100%;
 }
@@ -102,7 +106,7 @@ form label {
 .password-line {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .password-line label {
