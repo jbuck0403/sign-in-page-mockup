@@ -22,8 +22,10 @@ button {
   cursor: pointer;
 }
 
+html,
 body {
   width: 100%;
+  height: 100%;
   align-items: center;
   justify-content: center;
   margin: 0px;
@@ -36,6 +38,7 @@ body {
 
 .form-container {
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,8 +48,7 @@ body {
 form {
   display: flex;
   flex-direction: column;
-  max-width: var(--default-container-size);
-  min-width: var(--default-container-size);
+  width: var(--default-container-size);
   border: 1px solid rgba(0, 0, 0, 0.141);
   padding: 10px 20px;
   border-radius: 5px;
@@ -180,8 +182,7 @@ input[type="checkbox"] {
 }
 
 .create-account-container {
-  min-width: var(--default-container-size);
-  max-width: var(--default-container-size);
+  width: var(--default-container-size);
   display: flex;
   flex-direction: column;
   margin-top: 20px;
@@ -203,8 +204,6 @@ input[type="checkbox"] {
   grid-auto-columns: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  min-width: var(--default-container-size);
-  max-width: var(--default-container-size);
 }
 
 .container h5 {
@@ -227,23 +226,21 @@ input[type="checkbox"] {
 .border-container {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.436);
 }
 
-.border-gradient1 {
+.border-gradient {
   margin-top: 20px;
   width: 50%;
   height: 0.1px;
-  background: linear-gradient(to left, rgba(67, 66, 66, 0.323), white);
 }
 
-.border-gradient2 {
-  margin-top: 20px;
-  width: 50%;
-  height: 0.1px;
+.border-gradient #right-side {
   background: linear-gradient(to right, rgba(67, 66, 66, 0.323), white);
+}
+
+.border-gradient #right-side {
+  background: linear-gradient(to left, rgba(67, 66, 66, 0.323), white);
 }
 
 .footer-container {
@@ -251,9 +248,10 @@ input[type="checkbox"] {
   justify-content: center;
   text-align: center;
   display: flex;
+  margin-top: auto;
   flex-direction: column;
   width: 100%;
-  height: 15vh;
+  height: 100%;
   background: radial-gradient(
     ellipse at bottom,
     rgba(67, 66, 66, 0.173),
@@ -265,6 +263,7 @@ input[type="checkbox"] {
   display: flex;
   width: 45%;
   justify-content: space-evenly;
+  width: 300px;
 }
 
 .copyright {
