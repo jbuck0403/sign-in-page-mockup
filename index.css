@@ -2,19 +2,21 @@
   --default-text-color: black;
   --default-link-color: rgb(0, 110, 255);
   --default-link-hover-color: orange;
-  --default-container-size: 360px;
-  --default-button-height: 30px;
+  --default-container-size: 600px;
+  --default-button-height: 45px;
   --default-button-rounding: 5px;
   --default-button-color: #ffd814;
   --default-button-border-color: #fcd200;
+  --default-font-size: 20px;
+  --default-agree-font-size: 16px;
 }
 
 * {
   margin: 0px;
-  padding: 0;
+  padding: 0px;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  font-size: 10px;
+  font-size: var(--default-font-size);
 }
 
 button {
@@ -32,7 +34,7 @@ body {
 }
 
 .logo-container img {
-  height: 100px;
+  height: 15vh;
   width: auto;
 }
 
@@ -69,14 +71,14 @@ a:hover {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 2em;
   margin-bottom: 20px;
   font-weight: normal;
 }
 
 form input {
-  margin-bottom: 20px;
-  height: 30px;
+  margin-bottom: 60px;
+  height: 40px;
   padding: 10px;
   border: 1px solid gray;
   border-radius: 3px;
@@ -88,7 +90,7 @@ form input:focus {
 
 form label {
   width: auto;
-  font-size: 12px;
+  font-size: var(--default-font-size);
 }
 
 .email-text {
@@ -114,7 +116,7 @@ form label {
 }
 
 .continue-button {
-  font-size: 13px;
+  font-size: var(--default-font-size);
   background-color: var(--default-button-color);
   height: var(--default-button-height);
   border: 1px solid var(--default-button-border-color);
@@ -131,26 +133,32 @@ form label {
 }
 
 .continue-agreement p {
-  padding-right: 2px;
+  font-size: var(--default-agree-font-size);
+  padding-right: 5px;
 }
 
 .continue-agreement-and {
-  padding-left: 2px;
+  padding-left: 5px;
+}
+
+.continue-agreement a {
+  font-size: var(--default-agree-font-size);
 }
 
 .checkbox-label::before {
   content: " ";
   display: inline-block;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  border-left: 3px solid currentColor;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
   vertical-align: middle;
   margin-right: 0.7rem;
   transform: translateY(-1px);
 }
 
 .checkbox-label {
-  width: 80px;
+  margin-top: 20px;
+  width: 160px;
   color: var(--default-link-color);
   font-weight: normal;
 }
@@ -172,12 +180,12 @@ input[type="checkbox"] {
 .collapsible-content {
   max-height: 0px;
   overflow: hidden;
-  padding-left: 10px;
+  padding-left: 18px;
 }
 
 .collapsible-content a {
   display: inline-block;
-  font-size: 12px;
+  font-size: var(--default-font-size);
   margin-top: 5px;
 }
 
@@ -201,6 +209,7 @@ input[type="checkbox"] {
 }
 
 .container {
+  margin-top: 200px;
   width: var(--default-container-size);
   align-items: center;
   display: grid;
@@ -268,10 +277,98 @@ input[type="checkbox"] {
   display: flex;
   width: 45%;
   justify-content: space-evenly;
-  width: 300px;
+  width: 600px;
 }
 
 .copyright {
   margin-top: 15px;
   color: rgba(0, 0, 0, 0.686);
+}
+
+@media (max-width: 600px) {
+  :root {
+    --default-container-size: 360px;
+    --default-button-height: 50px;
+    --default-font-size: 15px;
+  }
+
+  html,
+  body {
+    width: 100%;
+  }
+
+  form input {
+    margin-bottom: 0px;
+  }
+
+  .container {
+    margin: 0px;
+  }
+
+  .checkbox-label {
+    margin-top: 0px;
+  }
+
+  .footer-links {
+    width: 100%;
+  }
+
+  .continue-agreement p {
+    font-size: 12px;
+  }
+
+  .continue-agreement a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --default-container-size: 260px;
+    --default-button-height: 40px;
+    --default-font-size: 12px;
+  }
+
+  html,
+  body {
+    width: 100%;
+  }
+
+  form input {
+    margin-bottom: 0px;
+  }
+
+  .container {
+    margin: 0px;
+  }
+
+  .checkbox-label {
+    margin-top: 0px;
+  }
+
+  .footer-links {
+    width: 100%;
+  }
+
+  .checkbox-label {
+    margin-top: 10px;
+  }
+
+  .continue-agreement {
+    margin: 5px 0px;
+  }
+
+  .continue-agreement p {
+    padding: 0px;
+    margin-right: 2px;
+    font-size: 8px;
+  }
+
+  .continue-agreement-and {
+    margin-left: 2px;
+  }
+
+  .continue-agreement a {
+    font-size: 8px;
+  }
 }
