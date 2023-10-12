@@ -11,6 +11,55 @@
   --default-agree-font-size: 16px;
 }
 
+.main-container {
+  min-height: 100%;
+  width: 100%;
+  place-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0fr 2.6fr 0.7fr 0.7fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "white-space logo white-space2"
+    "white-space sign-in white-space2"
+    "white-space create-account white-space2"
+    "footer footer footer";
+}
+
+.footer {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at bottom,
+    rgba(67, 66, 66, 0.173),
+    white
+  );
+  grid-area: footer;
+}
+
+.sign-in {
+  grid-area: sign-in;
+}
+
+.create-account {
+  grid-area: create-account;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.white-space {
+  grid-area: white-space;
+}
+
+.white-space2 {
+  grid-area: white-space2;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -28,19 +77,17 @@ html,
 body {
   width: 100%;
   height: 100%;
-  align-items: center;
-  justify-content: center;
   margin: 0px;
 }
 
 .logo-container img {
-  height: 15vh;
+  height: 200px;
   width: auto;
 }
 
 .form-container {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,7 +256,7 @@ input[type="checkbox"] {
 }
 
 .container {
-  margin-top: 200px;
+  margin-top: 0px;
   width: var(--default-container-size);
   align-items: center;
   display: grid;
@@ -243,7 +290,7 @@ input[type="checkbox"] {
 }
 
 .border-gradient {
-  margin-top: 20px;
+  margin-top: 0px;
   width: 50%;
   height: 0.1px;
 }
@@ -263,13 +310,7 @@ input[type="checkbox"] {
   display: flex;
   margin-top: auto;
   flex-direction: column;
-  width: 100%;
   height: 100%;
-  background: radial-gradient(
-    ellipse at bottom,
-    rgba(67, 66, 66, 0.173),
-    white
-  );
 }
 
 .footer-links {
@@ -292,13 +333,13 @@ input[type="checkbox"] {
     --default-font-size: 15px;
   }
 
-  html,
-  body {
-    width: 100%;
+  form input {
+    margin-bottom: 10px;
+    height: 30px;
   }
 
-  form input {
-    margin-bottom: 0px;
+  .logo-container img {
+    height: 100px;
   }
 
   .container {
@@ -322,7 +363,7 @@ input[type="checkbox"] {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
   :root {
     --default-container-size: 260px;
     --default-button-height: 40px;
@@ -335,7 +376,12 @@ input[type="checkbox"] {
   }
 
   form input {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
+    height: 30px;
+  }
+
+  .logo-container img {
+    height: 100px;
   }
 
   .container {

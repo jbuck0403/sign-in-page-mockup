@@ -7,64 +7,74 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
     </style>
-    <title>Document</title>
+    <title>Sign In</title>
   </head>
   <body>
-    <div class="form-container">
-      <div class="logo-container">
-        <img src="img\ct_logo.png" />
+    <div class="main-container">
+      <div class="footer">
+        <div class="border-container">
+          <div class="border-gradient" id="left-side"></div>
+          <div class="border-gradient" id="right-side"></div>
+        </div>
+        <div class="footer-container">
+          <div class="footer-links">
+            <a href="">Conditions of Use</a>
+            <a href="">Privacy Notice</a>
+            <a href="">Help</a>
+          </div>
+          <div class="copyright">©2023 Jack Buck</div>
+        </div>
       </div>
-      <form>
-        <h1>Sign in</h1>
-        <div class="email-line">
-          <label class="email-text" for="email"
-            >Email or mobile phone number</label
-          >
-        </div>
-        <input class="email" type="email" id="email" />
-        <div class="password-line">
-          <label for="password">Password</label>
-          <a href="">Forgot your password?</a>
-        </div>
-        <input class="password" type="password" id="password" />
-        <br />
-        <button class="continue-button">Continue</button>
-        <br />
-        <div class="continue-agreement">
-          <p>By continuing you agree to</p>
-          <a class="nothing-link" href="">nothing</a>
-          <p class="continue-agreement-and">and</p>
-          <a class="nothing-link" href="">also nothing</a>
-          <p>.</p>
-        </div>
-        <input type="checkbox" class="help-link-checkbox" id="checkbox-id" />
-        <label class="checkbox-label" for="checkbox-id">Need Help?</label>
-        <div class="collapsible-content">
-          <a href="">Forgot your password?</a>
+      <div class="sign-in">
+        <form>
+          <h1>Sign in</h1>
+          <div class="email-line">
+            <label class="email-text" for="email"
+              >Email or mobile phone number</label
+            >
+          </div>
+          <input class="email" type="email" id="email" />
+          <div class="password-line">
+            <label for="password">Password</label>
+            <a href="">Forgot your password?</a>
+          </div>
+          <input class="password" type="password" id="password" />
           <br />
-          <a href="">Other issues with Sign-In</a>
-        </div>
-      </form>
-      <div class="create-account-container">
-        <div class="container">
-          <div class="line"></div>
-          <h5>New to This Thing?</h5>
-          <div class="line"></div>
-        </div>
-        <button>Create your Account</button>
+          <button class="continue-button">Continue</button>
+          <br />
+          <div class="continue-agreement">
+            <p>By continuing you agree to</p>
+            <a class="nothing-link" href="">nothing</a>
+            <p class="continue-agreement-and">and</p>
+            <a class="nothing-link" href="">also nothing</a>
+            <p>.</p>
+          </div>
+          <input type="checkbox" class="help-link-checkbox" id="checkbox-id" />
+          <label class="checkbox-label" for="checkbox-id">Need Help?</label>
+          <div class="collapsible-content">
+            <a href="">Forgot your password?</a>
+            <br />
+            <a href="">Other issues with Sign-In</a>
+          </div>
+        </form>
       </div>
-      <div class="border-container">
-        <div class="border-gradient" id="left-side"></div>
-        <div class="border-gradient" id="right-side"></div>
-      </div>
-      <div class="footer-container">
-        <div class="footer-links">
-          <a href="">Conditions of Use</a>
-          <a href="">Privacy Notice</a>
-          <a href="">Help</a>
+      <div class="create-account">
+        <div class="create-account-container">
+          <div class="container">
+            <div class="line"></div>
+            <h5>New to This Thing?</h5>
+            <div class="line"></div>
+          </div>
+          <button>Create your Account</button>
         </div>
-        <div class="copyright">©2023 Jack Buck</div>
       </div>
+      <div class="logo">
+        <div class="logo-container">
+          <img src="img\ct_logo.png" />
+        </div>
+      </div>
+      <div class="white-space"></div>
+      <div class="white-space2"></div>
     </div>
   </body>
 </html>
